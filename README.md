@@ -51,9 +51,7 @@ Ausblick auf KI-gestützte Entwicklung.
 ---
 
 ## Unterlagen
-Zu jedem Kursteil gibt es:
-- eine **Dozentenversion**
-- eine **Schülerversion mit Grafiken**
+Zu jedem Kursteil gibt es eine **Schülerversion mit Grafiken**
 
 PDF- und Word-Dateien befinden sich in den jeweiligen Ordnern.
 
