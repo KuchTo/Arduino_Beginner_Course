@@ -75,11 +75,7 @@ https://www.arduino.cc/en/software
 Dieses Projekt steht unter einer freien Lizenz für Lern- und Lehrzwecke.
 Namensnennung des Autors ist erwünscht.
 
----
 
 Viel Spaß beim Lernen und Programmieren!
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 
