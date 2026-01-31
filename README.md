@@ -1,71 +1,78 @@
-# Arduino Einsteigerkurs 🛠️🤖
+# Arduino Einsteigerkurs
 
-Ein **praxisorientierter, 6-teiliger Arduino-Einsteigerkurs**, der Schritt für Schritt von den Grundlagen der Elektronik bis hin zu modernen Mikrocontrollern (ESP32), WLAN-Anwendungen und einem Ausblick auf KI-gestützte Entwicklung führt.
+Ein praxisorientierter, 6-teiliger Arduino-Einsteigerkurs von **Tobias Kuch**.
 
-Der Kurs richtet sich an **interessierte Anfänger mit Grundkenntnissen** und eignet sich sowohl für **Selbststudium**, **Workshops**, **VHS-Kurse** als auch für **Schulungen**.
-
----
-
-## 👨‍🏫 Autor & Dozent
-
-**Tobias Kuch**
+Der Kurs führt Schritt für Schritt von den Grundlagen der Elektronik über Arduino-
+Programmierung bis hin zu modernen Mikrocontrollern (ESP32), WLAN und einem
+Ausblick auf KI-gestützte Entwicklung.
 
 ---
 
-## 📚 Kursstruktur (6 Teile)
-
-### **Teil 1 – Elektronische & technische Grundlagen**
-- Strom, Spannung, Widerstand (verständlich erklärt)
-- Grundbauteile (LED, Widerstand, Taster)
-- CPU vs. Mikrocontroller
-- Aufbau und Pinstruktur des ATmega328 (Arduino Uno)
+## Zielgruppe
+- Interessierte Anfänger mit Grundkenntnissen
+- Selbstlerner
+- Workshops, VHS-Kurse, Schulungen
 
 ---
 
-### **Teil 2 – Arduino IDE & Einführung in die Programmierung**
-- Installation & Aufbau der Arduino IDE
-- Struktur eines Arduino-Programms (`setup()` / `loop()`)
-- Erste Befehle & Programme
-- Grundlagen der Programmierung
+## Kursaufbau
 
----
+### Teil 1 – Elektronische & technische Grundlagen
+- Strom, Spannung, Widerstand
+- Grundbauteile
+- Mikrocontroller & ATmega328
 
-### **Teil 3 – Digitale Ein- & Ausgänge**
-- Digitale Signale (HIGH / LOW)
-- LEDs als Ausgänge
-- Taster als Eingänge
-- Interne Pull-Up-Widerstände
-- Typische Anfängerfehler
+### Teil 2 – Arduino IDE & Programmierung
+- Entwicklungsumgebung
+- Programmstruktur
+- Erste Programme
 
----
+### Teil 3 – Digitale Ein- & Ausgänge
+- LEDs & Taster
+- Pull-Up-Widerstände
+- Typische Fehler
 
-### **Teil 4 – Logik, Timing & Projektvorbereitung**
-- Logische Entscheidungen (`if / else`)
-- Zustände & Zähler
-- Timing (`delay()` & Grundverständnis)
-- Entprellen von Tastern
-- Vorbereitung auf das Projekt
+### Teil 4 – Logik & Projektvorbereitung
+- if/else
+- Timing
+- Entprellen
+- Projektplanung
 
----
+### Teil 5 – Projekt: Elektronischer Würfel
+- Komplette Schaltung
+- Vollständiger Code
+- Schülerversion mit Platz für eigenen Code
 
-### **Teil 5 – Projekt: Elektronischer Würfel 🎲**
-- Komplettes Arduino-Projekt
-- Schaltung mit 6 LEDs & Taster
-- Strukturierter Programmablauf
-- Zwei Schülerversionen:
-  - 📝 mit Platz für eigenen Code
-  - 💻 mit vollständigem Beispielcode
-
----
-
-### **Teil 6 – ESP32, WLAN & Ausblick auf KI**
-- Übergang vom Arduino Uno zum ESP32
-- Unterschiede 5V vs. 3,3V
-- WLAN-Grundlagen & Beispielcode
-- Typische IoT-Anwendungen
+### Teil 6 – ESP32, WLAN & KI
+- Übergang vom Arduino zum ESP32
+- WLAN-Grundlagen
 - KI als Werkzeug beim Programmieren
 
 ---
 
-## 📂 Repository-Struktur
+## Unterlagen
+Zu jedem Kursteil gibt es:
+- eine **Dozentenversion**
+- eine **Schülerversion mit Grafiken**
+
+PDF- und Word-Dateien befinden sich in den jeweiligen Ordnern.
+
+---
+
+## Software
+Die Arduino IDE kann hier heruntergeladen werden:
+https://www.arduino.cc/en/software
+
+⚠️ Installer-Dateien sind bewusst **nicht** Teil dieses Repositories.
+
+---
+
+## Lizenz
+Dieses Projekt steht unter einer freien Lizenz für Lern- und Lehrzwecke.
+Namensnennung des Autors ist erwünscht.
+
+---
+
+Viel Spaß beim Lernen und Programmieren!
+
 
