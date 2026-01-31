@@ -51,7 +51,13 @@ Ausblick auf KI-gestützte Entwicklung.
 ---
 
 ## Unterlagen
+<<<<<<< Updated upstream
 Zu jedem Kursteil gibt es eine **Schülerversion mit Grafiken**
+=======
+Zu jedem Kursteil gibt es:
+- eine **Dozentenversion**
+- eine **Schülerversion mit Grafiken**
+>>>>>>> Stashed changes
 
 PDF- und Word-Dateien befinden sich in den jeweiligen Ordnern.
 
@@ -72,5 +78,8 @@ Namensnennung des Autors ist erwünscht.
 ---
 
 Viel Spaß beim Lernen und Programmieren!
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
