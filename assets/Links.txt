@@ -1,3 +1,9 @@
-Blockdiagramm einer CPU:
+Download Arduino IDE 2
+https://www.arduino.cc/en/software/
 
+Download Github Desktop:
+https://desktop.github.com/download/
+
+
+Blockdiagramm einer CPU:
 https://softwareg.com.au/de-de/blogs/computerhardware-1/blockdiagramm-einer-cpu?srsltid=AfmBOopNILCxkR19jR313XxihmApkbfx90lfLne6lJDCBhwHDEDHXkQ8
