@@ -4,6 +4,20 @@ https://www.arduino.cc/en/software/
 Download Github Desktop:
 https://desktop.github.com/download/
 
+GitHub Hauptseite von Tobias Kuch
+https://github.com/kuchto 
+
+Arduino Pinout:
+https://www.theengineeringprojects.com/2018/11/how-to-use-analogread-in-arduino.html
+
+
+YouTube Videos zum Thema Arduino:
+
+Einführung in den Arduino
+https://www.youtube.com/watch?v=XQR5y2Rz3Jw
+Digitale und Analoge Eingänge:
+https://www.youtube.com/watch?v=usJY4EHDETI
+
 
 Blockdiagramm einer CPU:
 https://softwareg.com.au/de-de/blogs/computerhardware-1/blockdiagramm-einer-cpu?srsltid=AfmBOopNILCxkR19jR313XxihmApkbfx90lfLne6lJDCBhwHDEDHXkQ8
