@@ -23,3 +23,5 @@ void loop() {
     while (true);
   }
 }
+
+auto.reifen.anzahl = 4;
