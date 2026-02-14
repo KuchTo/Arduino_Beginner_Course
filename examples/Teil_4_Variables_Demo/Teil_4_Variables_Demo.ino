@@ -6,7 +6,7 @@ unsigned long zeitstempel = 987654;
 
 // Kommazahlen
 float spannung = 3.7;
-double temperatur = 22.5;   // auf Arduino wie float
+
 
 // Wahr/Falsch
 bool ledAn = true;
@@ -37,9 +37,6 @@ void setup() {
 
   Serial.print("float: ");
   Serial.println(spannung);
-
-  Serial.print("double: ");
-  Serial.println(temperatur);
 
   Serial.print("bool: ");
   Serial.println(ledAn);
