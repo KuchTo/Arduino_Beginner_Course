@@ -18,11 +18,14 @@ https://www.youtube.com/watch?v=XQR5y2Rz3Jw
 Digitale und Analoge Eingänge:
 https://www.youtube.com/watch?v=usJY4EHDETI
 
+LogikKontrollstruckturen
+https://docs.arduino.cc/language-reference/#structure
 
 Pseudocode Erklärung:
 https://www.youtube.com/watch?v=YpzmKOmmYrg
-
-
+Weitere Videos zum Thema Pseudocode und Struktogramme 
+https://www.youtube.com/watch?v=XSSQ5Z_1D7w
+https://www.youtube.com/watch?v=FYfZQdcIRhM
 
 Blockdiagramm einer CPU:
 https://softwareg.com.au/de-de/blogs/computerhardware-1/blockdiagramm-einer-cpu?srsltid=AfmBOopNILCxkR19jR313XxihmApkbfx90lfLne6lJDCBhwHDEDHXkQ8
