@@ -1,14 +1,5 @@
-// Programm 5 – SWITCH CASE (Menü mit Poti!)
-//  SWITCH CASE  ergibt eine saubere Auswahlsteuerung und ersetzt viele if-Ketten
-// Poti wählt Modus / Taster aktiviert Modus
-
-// Poti Bereich	Modus
-// 0–300	LED aus
-// 301–600	LED an
-// 601–900	Blinken
-// >900	PWM dimmen
-
-
+// Programm 3 – WHILE Schleife (läuft solange Bedingung gilt)
+// LED bleibt an solange Taster gedrückt
 // Programm ist Teil des Grundkurses Arduino Einsteiger VHS 2026
 
 
@@ -20,45 +11,25 @@ void setup() {
 
 void loop() {
 
-  int poti = analogRead(A0);
-  int modus;
-
-  if (poti < 300) modus = 0;
-  else if (poti < 600) modus = 1;
-  else if (poti < 900) modus = 2;
-  else modus = 3;
-
   if (digitalRead(8) == LOW) {
 
-    switch (modus) {
+    int hell;
 
-      case 0:
-        digitalWrite(11, HIGH);
-        Serial.println("LED AUS");
-        break;
+    do {
+      hell = analogRead(A0);
+      hell = map(hell, 0, 1023, 0, 255);
 
-      case 1:
-        digitalWrite(11, LOW);
-        Serial.println("LED AN");
-        break;
+      analogWrite(11, 255 - hell);
 
-      case 2:
-        digitalWrite(11, LOW);
-        delay(200);
-        digitalWrite(11, HIGH);
-        delay(200);
-        Serial.println("Blinken");
-        break;
+      Serial.print("Helligkeit: ");
+      Serial.println(hell);
 
-      case 3:
-        int hell = map(poti, 0, 1023, 0, 255);
-        analogWrite(11, 255 - hell);
-        Serial.println("Dimmen");
-        break;
-    }
+      delay(150);
+
+    } while (digitalRead(8) == LOW);
+
+    digitalWrite(11, HIGH);
   }
 }
-
-
 
 

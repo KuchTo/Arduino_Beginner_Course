@@ -1,8 +1,3 @@
-// Programm 3 – WHILE Schleife (läuft solange Bedingung gilt)
-// LED bleibt an solange Taster gedrückt
-// Programm ist Teil des Grundkurses Arduino Einsteiger VHS 2026
-
-
 void setup() {
   pinMode(11, OUTPUT);
   pinMode(8, INPUT_PULLUP);
@@ -11,20 +6,18 @@ void setup() {
 
 void loop() {
 
-  Serial.println("Warte auf Tastendruck...");
+  if (digitalRead(8) == LOW) {
 
-  while (digitalRead(8) == HIGH) {
-    // tut nichts – wartet
+    int blinks = map(analogRead(A0), 0, 1023, 1, 20);
+
+    for (int i = 0; i < blinks; i++) {
+      digitalWrite(11, LOW);
+      delay(150);
+      digitalWrite(11, HIGH);
+      delay(150);
+    }
+    while (digitalRead(8) == LOW) {
+  // warten bis Taste losgelassen wird
+    }
   }
-
-  Serial.println("Gedrückt!");
-
-  while (digitalRead(8) == LOW) {
-    digitalWrite(11, LOW);
-  }
-
-  digitalWrite(11, HIGH);
-  Serial.println("Losgelassen!");
 }
-
-

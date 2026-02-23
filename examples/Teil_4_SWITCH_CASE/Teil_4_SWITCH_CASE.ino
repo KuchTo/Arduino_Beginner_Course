@@ -11,57 +11,54 @@
 
 // Programm ist Teil des Grundkurses Arduino Einsteiger VHS 2026
 
-// LED Pins (LOW aktiv!)
-const int ledRot   = 11;
-const int ledGelb  = 10;
-const int ledGruen = 9;
-
-const int batteriePin = A0;
-
-float spannung;   // Kommazahl!
 
 void setup() {
-  pinMode(ledRot, OUTPUT);
-  pinMode(ledGelb, OUTPUT);
-  pinMode(ledGruen, OUTPUT);
-
+  pinMode(11, OUTPUT);
+  pinMode(8, INPUT_PULLUP);
   Serial.begin(9600);
-
-  // Alle LEDs aus
-  digitalWrite(ledRot, HIGH);
-  digitalWrite(ledGelb, HIGH);
-  digitalWrite(ledGruen, HIGH);
 }
 
 void loop() {
 
-  int messwert = analogRead(batteriePin);
+  int poti = analogRead(A0);
+  int modus;
 
-  // Umrechnung in Volt
-  spannung = messwert * 5.0 / 1023.0;
+  if (poti < 300) modus = 0;
+  else if (poti < 600) modus = 1;
+  else if (poti < 900) modus = 2;
+  else modus = 3;
 
-  Serial.print("Spannung: ");
-  Serial.print(spannung);
-  Serial.println(" V");
+  if (digitalRead(8) == LOW) {
 
-  // Alle LEDs erstmal aus
-  digitalWrite(ledRot, HIGH);
-  digitalWrite(ledGelb, HIGH);
-  digitalWrite(ledGruen, HIGH);
+    switch (modus) {
 
-  // Ampel-Logik
-  if (spannung >= 1.3) {
-    digitalWrite(ledGruen, LOW);   // gut
+      case 0:
+        digitalWrite(11, HIGH);
+        Serial.println("LED AUS");
+        break;
+
+      case 1:
+        digitalWrite(11, LOW);
+        Serial.println("LED AN");
+        break;
+
+      case 2:
+        digitalWrite(11, LOW);
+        delay(200);
+        digitalWrite(11, HIGH);
+        delay(200);
+        Serial.println("Blinken");
+        break;
+
+      case 3:
+        int hell = map(poti, 0, 1023, 0, 255);
+        analogWrite(11, 255 - hell);
+        Serial.println("Dimmen");
+        break;
+    }
   }
-  else if (spannung >= 1.1) {
-    digitalWrite(ledGelb, LOW);    // mittel
-  }
-  else {
-    digitalWrite(ledRot, LOW);     // leer
-  }
-
-  delay(500);
 }
+
 
 
 

@@ -11,25 +11,20 @@ void setup() {
 
 void loop() {
 
-  if (digitalRead(8) == LOW) {
+  Serial.println("Warte auf Tastendruck...");
 
-    int hell;
-
-    do {
-      hell = analogRead(A0);
-      hell = map(hell, 0, 1023, 0, 255);
-
-      analogWrite(11, 255 - hell);
-
-      Serial.print("Helligkeit: ");
-      Serial.println(hell);
-
-      delay(150);
-
-    } while (digitalRead(8) == LOW);
-
-    digitalWrite(11, HIGH);
+  while (digitalRead(8) == HIGH) {
+    // tut nichts – wartet
   }
+
+  Serial.println("Gedrückt!");
+
+  while (digitalRead(8) == LOW) {
+    digitalWrite(11, LOW);
+  }
+
+  digitalWrite(11, HIGH);
+  Serial.println("Losgelassen!");
 }
 
 
