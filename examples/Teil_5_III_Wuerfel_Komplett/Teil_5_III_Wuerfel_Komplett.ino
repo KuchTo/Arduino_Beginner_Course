@@ -103,30 +103,18 @@ void zeigeWuerfel(int wurf) {
 
 // ----- Hauptloop -----
 
+
 void loop() {
 
-  bool aktuellerTaster = digitalRead(tasterPin);
+  for (int zahl = 1; zahl <= 6; zahl++) {
 
-  // Flanke erkennen: HIGH → LOW (gedrückt)
-  if (letzterTaster == HIGH && aktuellerTaster == LOW) {
+    Serial.print("Zeige: ");
+    Serial.println(zahl);
 
-    Serial.println("Wuerfeln...");
+    zeigeWuerfel(zahl);
 
-    // kleine Animation
-    for (int i = 0; i < 12; i++) {
-      digitalWrite(ledMitte, LOW);
-      delay(50);
-      digitalWrite(ledMitte, HIGH);
-      delay(50);
-    }
-
-    wurf = random(1, 7);
-
-    Serial.print("Ergebnis: ");
-    Serial.println(wurf);
-
-    zeigeWuerfel(wurf);
+    delay(500);  // 0,5 Sekunden Pause
   }
-
-  letzterTaster = aktuellerTaster;
 }
+
+
