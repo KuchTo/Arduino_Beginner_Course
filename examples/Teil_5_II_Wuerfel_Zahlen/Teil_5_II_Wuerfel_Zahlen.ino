@@ -113,8 +113,9 @@ void loop() {
 
     zeigeWuerfel(zahl);
 
-    delay(500);  // 0,5 Sekunden Pause
+    delay(1000);  // 1 Sekunden Pause
   }
+  delay(2000);  //2 Sekunden Pause
 }
 
 

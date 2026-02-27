@@ -11,6 +11,9 @@ const int tasterPin = 8;
 int wurf = 0;
 bool letzterTaster = HIGH;
 
+// ---------------------------
+// Alle LEDs ausschalten
+// ---------------------------
 void allesAus(){
   digitalWrite(led1,HIGH);
   digitalWrite(led2,HIGH);
@@ -21,6 +24,9 @@ void allesAus(){
   digitalWrite(ledMitte,HIGH);
 }
 
+// ---------------------------
+// Würfel anzeigen
+// ---------------------------
 void zeigeWuerfel(int zahl){
 
   allesAus();
@@ -68,6 +74,29 @@ void zeigeWuerfel(int zahl){
   }
 }
 
+// ---------------------------
+// Würfel-Animation
+// ---------------------------
+void animation(){
+
+  // Schnellphase
+  for(int i=0;i<10;i++){
+    int zufall = random(1,7);
+    zeigeWuerfel(zufall);
+    delay(80);
+  }
+
+  // Langsamer werdend
+  for(int i=0;i<6;i++){
+    int zufall = random(1,7);
+    zeigeWuerfel(zufall);
+    delay(150 + i*50);  // wird langsamer
+  }
+}
+
+// ---------------------------
+// Setup
+// ---------------------------
 void setup(){
 
   pinMode(led1,OUTPUT);
@@ -77,22 +106,28 @@ void setup(){
   pinMode(led5,OUTPUT);
   pinMode(led6,OUTPUT);
   pinMode(ledMitte,OUTPUT);
+
   pinMode(tasterPin,INPUT_PULLUP);
+
   randomSeed(analogRead(A0));
-  allesAus();
+
+  allesAus();   // ⭐ Wichtig: Startzustand alles aus
 }
 
+// ---------------------------
+// Hauptprogramm
+// ---------------------------
 void loop(){
 
   bool aktuellerTaster = digitalRead(tasterPin);
 
   if(letzterTaster==HIGH && aktuellerTaster==LOW){
+    delay(200);             // Taster enprellen
+    animation();            // ⭐ neue Zwischenanimation
 
-    wurf = random(1,7);
+    wurf = random(1,7);     // echtes Ergebnis
     zeigeWuerfel(wurf);
-    delay(200); // Taster enprellen
   }
 
   letzterTaster = aktuellerTaster;
 }
-

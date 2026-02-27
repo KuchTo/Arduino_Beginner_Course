@@ -70,7 +70,7 @@ void loop() {
     Serial.println(")");
 
     digitalWrite(leds[i], LOW);
-    delay(600);
+    delay(3000);
   }
 
   
@@ -78,5 +78,5 @@ void loop() {
   Serial.println("Testdurchlauf abgeschlossen.");
   Serial.println("------------------------------");
 
-  delay(2000);
+  delay(5000);
 }
